@@ -1,13 +1,19 @@
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main() {
+
     // Variáveis para a carta 1
     char estado1[50], codigo1[50], cidade1[50];
     float populacao1, area1, pib1;
     float densidade1, pib_per_capita1;
     int pontos_turisticos1;
     float superpoder1, superpoder2; //foram adicionadas novas variáveis, a vairável superpoder1 e superpoder2
+    int escolhajogador, escolhacomputador;
+    
+
 
     // Variáveis para a carta 2
     char estado2[50], codigo2[50], cidade2[50];
@@ -88,9 +94,11 @@ int main() {
     printf("PIB per Capita: %.2f reais\n", pib_per_capita2);
     printf("super poder: %f\n", superpoder2); //exibição do print do superpoder
 
-    printf("\n\n");  //logo abaixo foram adicionados comparações entres atributos para saber qual é maior, o maior sempre vence, somente a densidade populacional que tem como objetivo ser menor.
 
-    printf("Comparação de Cartas: \n");
+    printf("\n\n");  //logo abaixo foram adicionados comparações entres atributos para saber qual é maior, o maior sempre vence, somente a densidade populacional que tem como objetivo ser menor. 
+    
+
+   
     if( populacao1 > populacao2){
         printf("População: Carta 1 venceu\n");
     }else{
@@ -126,17 +134,16 @@ int main() {
     }else{
         printf("Super Poder: Carta 2 venceu\n");
     } 
- 
-    printf("\n\n");
-
-
-    printf("Comparação de cartas (Atributo: Densidade Populacional): \n");  //uma última comparação onde o menor vence.
     if( densidade1 < densidade2){
-        printf("Densidade Populacional: Carta 1 venceu\n");
-    }else{
-        printf("Densidade Populacional: Carta 2 venceu\n");
+        printf("Carta 1 - Densidade Populacional: %.2f hab/km²\n", densidade1);
+        printf("Carta 2 - Densidade Populacional: %.2f hab/km²\n", densidade2);
+        printf("Resultado: Carta 1 venceu\n");
+    }
+    else{
+        printf("Carta 1 - Densidade Populacional: %.2f hab/km²\n", densidade1);
+        printf("Carta 2 - Densidade Populacional: %.2f hab/km²\n", densidade2);
+        printf("Resultado: Carta 2 venceu\n");
     } 
-
-  
+      
     return 0;
 }

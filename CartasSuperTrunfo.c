@@ -133,7 +133,9 @@ int main() {
         printf("Super Poder: Carta 1 venceu\n");
     }else{
         printf("Super Poder: Carta 2 venceu\n");
-    } 
+    }
+    
+    printf("Comparação de um atributo em específico:\n");
     if( densidade1 < densidade2){
         printf("Carta 1 - Densidade Populacional: %.2f hab/km²\n", densidade1);
         printf("Carta 2 - Densidade Populacional: %.2f hab/km²\n", densidade2);

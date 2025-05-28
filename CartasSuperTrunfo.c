@@ -1,7 +1,5 @@
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 
 int main() {
@@ -12,7 +10,7 @@ int main() {
     float densidade1, pib_per_capita1;
     int pontos_turisticos1;
     float superpoder1, superpoder2; //foram adicionadas novas variáveis, a vairável superpoder1 e superpoder2
-    int escolhajogador, escolhacomputador;
+    
     
 
 

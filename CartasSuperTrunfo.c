@@ -1,18 +1,12 @@
-
 #include <stdio.h>
 
-
 int main() {
-
     // Variáveis para a carta 1
     char estado1[50], codigo1[50], cidade1[50];
     float populacao1, area1, pib1;
     float densidade1, pib_per_capita1;
     int pontos_turisticos1;
     float superpoder1, superpoder2; //foram adicionadas novas variáveis, a vairável superpoder1 e superpoder2
-    
-    
-
 
     // Variáveis para a carta 2
     char estado2[50], codigo2[50], cidade2[50];
@@ -49,12 +43,12 @@ int main() {
     printf("Estado: %s\n", estado1);
     printf("Código da carta: %s\n", codigo1);
     printf("Nome da Cidade: %s\n", cidade1);
-    printf("População: %.f\n", populacao1);
+    printf("População: %.0f\n", populacao1);
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos1);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
-    printf("PIB per Capita: %.2f reais\n", pib_per_capita1);
+    printf("PIB per Capita: %f reais\n", pib_per_capita1);
     printf("super poder: %f\n", superpoder1);  //exibição do print do superpoder
 
 
@@ -85,7 +79,7 @@ int main() {
     printf("Estado: %s\n", estado2);
     printf("Código da carta: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", cidade2);
-    printf("População: %.f\n", populacao2);
+    printf("População: %.0f\n", populacao2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos2);
@@ -93,41 +87,60 @@ int main() {
     printf("PIB per Capita: %.2f reais\n", pib_per_capita2);
     printf("super poder: %f\n", superpoder2); //exibição do print do superpoder
 
+    printf("\n\n");  //logo abaixo foram adicionados comparações entres atributos para saber qual é maior, o maior sempre vence, somente a densidade populacional que tem como objetivo ser menor.
 
-    printf("\n\n");  //logo abaixo foram adicionados comparações entres atributos para saber qual é maior, o maior sempre vence, somente a densidade populacional que tem como objetivo ser menor. 
-    
-    printf("Comparação das cartas:");
-
+    printf("Comparação de Cartas: \n");
     if( populacao1 > populacao2){
         printf("População: Carta 1 venceu\n");
     }else{
         printf("População: Carta 2 venceu\n");
-    }
+    } 
+
+    if( area1 > area2){
+        printf("Área: Carta 1 venceu\n");
+    }else{
+        printf("Área: Carta 2 venceu\n");
+    } 
 
     if( pib1 > pib2){
         printf("PIB: Carta 1 venceu\n");
     }else{
         printf("PIB: Carta 2 venceu\n");
-    }
-    
+    } 
+
     if( pontos_turisticos1 > pontos_turisticos2){
         printf("Pontos Turísticos: Carta 1 venceu\n");
     }else{
         printf("Pontos Turísticos: Carta 2 venceu\n");
-    }
+    } 
 
     if( pib_per_capita1 > pib_per_capita2){
         printf("PIB per Capita: Carta 1 venceu\n");
     }else{
         printf("PIB per Capita: Carta 2 venceu\n");
-    }
+    } 
 
     if( superpoder1 > superpoder2){
         printf("Super Poder: Carta 1 venceu\n");
     }else{
         printf("Super Poder: Carta 2 venceu\n");
-    }
+    } 
+ 
+    printf("\n\n");
 
-      
+
+    printf("Comparação de cartas (Atributo: Densidade Populacional): \n");  //uma última comparação onde o menor vence.
+    if( densidade1 < densidade2){
+        printf("Carta 1 - Densidade Populacional: %.2f hab/km²\n", densidade1);
+        printf("Carta 2 - Densidade Populacional: %.2f hab/km²\n", densidade2);
+        printf("Carta 1 venceu!");
+    }else{
+        printf("Carta 1 - Densidade Populacional: %.2f hab/km²\n", densidade1);
+        printf("Carta 2 - Densidade Populacional: %.2f hab/km²\n", densidade2);
+        printf("Carta 2 venceu!");
+    } 
+
+
+  
     return 0;
 }
